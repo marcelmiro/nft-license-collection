@@ -48,7 +48,7 @@ contract LicenseCollection is ERC721, Ownable, ILicenseCollection {
      * @notice Contract metadata URI
      */
     function contractURI() public pure override returns (string memory) {
-        return ""; // TODO: Change
+        return "https://ipfs.filebase.io/ipfs/QmRHtrLCSmLzjiGcVhYEmQSwdCixVY2JT35JevnwwZD332";
     }
 
     /**
