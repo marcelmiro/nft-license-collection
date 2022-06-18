@@ -573,33 +573,37 @@ describe('LicenseCollection', function () {
 		})
 	})
 
-	context('Withdraw balance', function () {
-		it("Should withdraw contract's ether balance", async function () {
-			const mintTimes = 15
+	it("Should withdraw contract's ether balance", async function () {
+		const mintTimes = 15
 
-			const promises: Promise<unknown>[] = []
+		const promises: Promise<unknown>[] = []
 
-			for (let i = 0; i < mintTimes; i++)
-				promises.push(mintToken(signers[1]))
+		for (let i = 0; i < mintTimes; i++)
+			promises.push(mintToken(signers[1]))
 
-			const [mintPrice] = await Promise.all([
-				sc.MINT_PRICE(),
-				...promises,
-			])
+		const [mintPrice] = await Promise.all([
+			sc.MINT_PRICE(),
+			...promises,
+		])
 
-			const expectedBalance = mintPrice.mul(mintTimes)
-			expect(await provider.getBalance(sc.address)).to.equal(
-				expectedBalance,
-			)
+		const expectedBalance = mintPrice.mul(mintTimes)
+		expect(await provider.getBalance(sc.address)).to.equal(
+			expectedBalance,
+		)
 
-			const ownerBalance = await owner.getBalance()
+		const ownerBalance = await owner.getBalance()
 
-			await sc.connect(signers[2]).withdrawBalance()
+		await sc.connect(signers[2]).withdrawBalance()
 
-			expect(await provider.getBalance(sc.address)).to.equal(0)
-			expect(await owner.getBalance()).to.equal(
-				ownerBalance.add(expectedBalance),
-			)
-		})
+		expect(await provider.getBalance(sc.address)).to.equal(0)
+		expect(await owner.getBalance()).to.equal(
+			ownerBalance.add(expectedBalance),
+		)
+	})
+
+	it('Should return contract URI', async function () {
+		const uri = await sc.contractURI()
+		expect(typeof uri).to.equal('string')
+		expect(uri.length).to.be.greaterThan(0)
 	})
 })
