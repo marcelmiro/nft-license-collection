@@ -10,10 +10,18 @@
 
 .title {
     font-size: 3rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.description {
+    width: 90%;
+    max-width: 40rem;
+    text-align: center;
+    color: #93a3bb;
 }
 
 .button {
+    margin-top: 2rem;
     font-size: 1.125rem;
     cursor: not-allowed;
     color: white;
@@ -30,15 +38,33 @@
 }
 
 .footer {
-    margin-top: 4rem;
+    margin-top: 3.5rem;
     color: #93a3bb;
 }
 
-.footer a {
+.footerText a {
     color: white;
     transition: color 0.2s;
 }
 
-.footer a:hover {
+.footerText a:hover {
     color: #c27ff9;
+}
+
+.footerIcons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footerIcon {
+    width: 2.25rem;
+    height: 2.25rem;
+    transition: transform 0.2s;
+}
+
+.footerIcon:hover {
+    transform: translateY(-0.125rem);
 }
