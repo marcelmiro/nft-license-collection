@@ -9,14 +9,14 @@ const Home: NextPage = () => {
 			<h1 className={styles.title}>NFT Licenses</h1>
 
 			<p className={styles.description}>
-				This is an NFT project that lives in Rinkeby (Ethereum's
+				This is an NFT project that lives in Rinkeby (Ethereum&apos;s
 				testnet). This NFT collection has a maximum mintable supply of
 				500 tokens and requires users to pay 0.01 ether every 10 minutes
-				so that the token doesn't expire. If an NFT expires, its image
-				will change and transfer and rental requests will be denied. The
-				NFTs also offer the ability to be rented as owner and user
-				permissions are separated. During rentals, transfers are
-				disabled.
+				so that the token doesn&apos;t expire. If an NFT expires, its
+				image will change and transfer and rental requests will be
+				denied. The NFTs also offer the ability to be rented as owner
+				and user permissions are separated. During rentals, transfers
+				are disabled.
 			</p>
 
 			<button className={styles.button}>Log in</button>
@@ -27,6 +27,7 @@ const Home: NextPage = () => {
 						href="https://testnets.opensea.io/collection/nft-licenses"
 						className={styles.footerIcon}
 						target="_blank"
+						rel="noreferrer"
 					>
 						<OpenseaIcon />
 					</a>
@@ -34,6 +35,7 @@ const Home: NextPage = () => {
 						href="https://github.com/marcelmiro/nft-license-collection"
 						className={styles.footerIcon}
 						target="_blank"
+						rel="noreferrer"
 					>
 						<GithubIcon />
 					</a>
@@ -41,7 +43,11 @@ const Home: NextPage = () => {
 
 				<p className={styles.footerText}>
 					Created by{' '}
-					<a href="https://marcelmiro.com/" target="_blank">
+					<a
+						href="https://marcelmiro.com/"
+						target="_blank"
+						rel="noreferrer"
+					>
 						Marcel
 					</a>
 					.
