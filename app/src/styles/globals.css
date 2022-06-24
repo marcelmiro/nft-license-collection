@@ -39,3 +39,11 @@ h2 {
 .wrapper {
 	padding: 2rem 1rem 0;
 }
+
+#nprogress .bar {
+	background-color: #c27ff9 !important;
+}
+
+#nprogress .peg {
+	box-shadow: 0 0 10px #c27ff9, 0 0 5px #c27ff9 !important;
+}
