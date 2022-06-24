@@ -1,0 +1,59 @@
+.container {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+.text {
+	text-align: center;
+	color: #93a3bb;
+}
+
+.nfts {
+	margin: 0 auto;
+	width: 95%;
+	max-width: 75rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.nft {
+	--size: 22.5rem;
+	width: var(--size);
+	background-color: #1a1a21;
+	border-radius: 1rem;
+	overflow: hidden;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	cursor: pointer;
+	border: 0.25rem solid transparent;
+	transition: border-color 0.2s;
+	&:hover {
+		border-color: #c27ff9;
+	}
+}
+
+.name {
+	text-align: center;
+	padding: 0.5rem 0;
+}
+
+.image {
+	width: var(--size);
+	height: var(--size);
+}
+
+.spinner {
+	margin: 2rem 0;
+	width: 3rem;
+	height: 3rem;
+}
+
+@media screen and (max-width: 60rem) {
+	.nft {
+		--size: 17.5rem;
+	}
+}

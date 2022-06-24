@@ -1,0 +1,15 @@
+.container {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+    text-align: center;
+}
+
+.title {
+	margin-bottom: 0.75rem;
+}
+
+.description {
+	max-width: 40rem;
+	color: #93a3bb;
+}

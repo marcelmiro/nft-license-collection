@@ -1,0 +1,243 @@
+.container {
+	margin: 0 auto;
+	max-width: 75rem;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	gap: 1rem 2rem;
+}
+
+.text {
+	color: #93a3bb;
+	text-align: center;
+	a {
+		transition: color 0.2s;
+		color: white;
+		&:hover {
+			color: #c27ff9;
+		}
+	}
+}
+
+.image {
+	flex: 1 0 auto;
+	position: relative;
+	width: 100%;
+	max-width: 31.25rem;
+	&:after {
+		content: '';
+		display: block;
+		padding-bottom: 100%;
+	}
+}
+
+.name {
+	text-align: left;
+}
+
+.description {
+	color: #93a3bb;
+}
+
+.address {
+	color: #93a3bb;
+	display: flex;
+	white-space: pre-wrap;
+	a {
+		color: white;
+		transition: color 0.2s;
+		&:hover {
+			color: #c27ff9;
+		}
+	}
+	& + & {
+		margin-top: 1rem;
+	}
+}
+
+.addressSkeleton {
+	width: 12rem;
+	height: auto;
+	margin-left: 0.25rem;
+}
+
+.stats {
+	margin-top: 2rem;
+	display: flex;
+	flex-flow: row wrap;
+	gap: 1.5rem 5.25rem;
+}
+
+.stat {
+	padding: 0.125rem 0;
+	min-width: 4rem;
+	display: flex;
+	flex-flow: column nowrap;
+	position: relative;
+}
+
+.statTitle {
+	margin: 0;
+	font-weight: 400;
+	font-size: 0.875rem;
+	color: #93a3bb;
+	margin-bottom: 0.75rem;
+}
+
+.statText {
+	margin: 0;
+	font-weight: 400;
+	font-size: 1rem;
+}
+
+.spinner {
+	margin: 3rem 0 1rem;
+	width: 3rem;
+	height: 3rem;
+}
+
+.actions {
+	margin-top: 2rem;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+.actionButton {
+	padding: 0 1rem;
+	height: 2.25rem;
+	line-height: 2.25rem;
+	border-radius: 0.5rem;
+	border: 0.125rem solid #353c47;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 0.2s;
+	&:hover {
+		background-color: #353c47;
+	}
+	&[disabled] {
+		cursor: not-allowed;
+		background-color: #353c47;
+	}
+}
+
+.actionPrimaryButton {
+	@extend .actionButton;
+	border: none;
+	background-color: #c27ff9;
+	&:not([disabled]):hover {
+		background-color: #cc92f9;
+	}
+}
+
+.modal {
+	padding: 3rem;
+	border-radius: 1rem;
+	text-align: center;
+	h2 {
+		margin: 0 0 1rem;
+		font-size: 2rem;
+	}
+	.actions {
+		margin-top: 1.5rem;
+		justify-content: center;
+	}
+	.text {
+		max-width: 20rem;
+	}
+}
+
+.input {
+	margin-top: 1.5rem;
+	width: 20rem;
+	max-width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: flex-start;
+	gap: 0.5rem;
+	label {
+		color: #93a3bb;
+		font-size: 0.875rem;
+	}
+	input {
+		width: 100%;
+		height: 2.5rem;
+		border-radius: 0.5rem;
+		padding-left: 0.5rem;
+		font-size: 1rem;
+		color: white;
+		background: none;
+		border: 0.125rem solid #353c47;
+		transition: border-color 0.2s;
+		&:focus {
+			border-color: #93a3bb;
+		}
+	}
+}
+
+.renewAmount {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: stretch;
+	gap: 0.5rem;
+	p {
+		margin: 0;
+		flex: 1 0 auto;
+		border: 0.125rem solid #353c47;
+		border-radius: 0.5rem;
+		height: 2.5rem;
+		line-height: 2.5rem;
+	}
+}
+
+.renewAmountButton {
+	width: 2.5rem;
+	height: 2.5rem;
+	border: 0.125rem solid #353c47;
+	border-radius: 0.5rem;
+	font-size: 1.5rem;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 0.2s;
+	&:hover {
+		background-color: #353c47;
+	}
+}
+
+.error {
+	@extend .text;
+	color: #ef466f;
+}
+
+@media screen and (max-width: 54rem) {
+	.container,
+	.content {
+		flex-flow: column nowrap;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	.content {
+		display: flex;
+		text-align: center;
+	}
+	.stats {
+		margin: 3rem 1rem 0;
+		justify-content: center;
+	}
+	.actions {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 27.5rem) {
+	.modal {
+		padding: 2rem;
+	}
+}

@@ -1,0 +1,33 @@
+.container {
+	margin-top: 4rem;
+	color: #93a3bb;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+}
+
+.text a {
+    color: white;
+    transition: color 0.2s;
+    &:hover {
+        color: #c27ff9;
+    }
+}
+
+.icons {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.icon {
+	width: 2.25rem;
+	height: 2.25rem;
+	transition: transform 0.2s;
+    &:hover {
+        transform: translateY(-0.125rem);
+    }
+}

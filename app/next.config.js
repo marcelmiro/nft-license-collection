@@ -4,8 +4,9 @@ const nextConfig = {
 	poweredByHeader: false,
 	images: {
 		formats: ['image/avif', 'image/webp'],
+		domains: ['ipfs.filebase.io']
 	},
-	webpack(config, { dev }) {
+	webpack(config) {
 		// SVGR config
 		config.module.rules.push({
 			test: /\.svg$/,

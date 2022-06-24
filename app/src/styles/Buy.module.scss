@@ -1,0 +1,87 @@
+.container {
+    margin: 0 auto;
+    max-width: 75rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+    max-width: 500px;
+}
+
+.button {
+    margin: 2rem 2rem 1rem;
+    padding: 0 1rem;
+    height: 2.625rem;
+    border-radius: 0.5rem;
+	background-color: #c27ff9;
+    cursor: pointer;
+	box-shadow: 0 0 2rem -0.375rem rgba(#cc92f9, 0.5);
+	transition: background-color 0.16s;
+	&:not([disabled]):hover {
+		background-color: #cc92f9;
+	}
+    &[disabled] {
+        cursor: not-allowed;
+        background-color: #353c47;
+        box-shadow: none;
+    }
+}
+
+.text {
+    color: #93a3bb;
+    text-align: center;
+}
+
+.error {
+    color: #ef466f;
+}
+
+.mintModal {
+    padding: 3rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.modalTitle {
+    margin: 0 0 1rem;
+    font-size: 2rem;
+}
+
+.modalText {
+    margin: 0;
+    font-size: 1rem;
+    color: #93a3bb;
+}
+
+.modalButtons {
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modalButton {
+    padding: 0 1rem;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    border-radius: 0.5rem;
+    background-color: #353c47;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    &:hover {
+        background-color: #3a3f4a;
+    }
+}
+
+.modalPrimaryButton {
+    @extend .modalButton;
+    background-color: #c27ff9;
+    &:hover {
+        background-color: #cc92f9;
+    }
+}

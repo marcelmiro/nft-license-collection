@@ -1,0 +1,60 @@
+.container {
+	width: 3rem;
+	height: 3rem;
+	-webkit-animation: spin 1.8s linear infinite;
+	animation: spin 1.8s linear infinite;
+}
+
+.path {
+	stroke: white;
+	stroke-width: 4.4px;
+	stroke-dasharray: 150, 200;
+	stroke-dashoffset: -10;
+	stroke-linecap: round;
+	-webkit-animation: dash 1.6s ease-in-out infinite;
+	animation: dash 1.6s ease-in-out infinite;
+}
+
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes dash {
+	0% {
+		stroke-dasharray: 1, 200;
+		stroke-dashoffset: 0;
+	}
+	50% {
+		stroke-dasharray: 89, 200;
+		stroke-dashoffset: -35;
+	}
+	100% {
+		stroke-dasharray: 89, 200;
+		stroke-dashoffset: -124;
+	}
+}
+
+@keyframes dash {
+	0% {
+		stroke-dasharray: 1, 200;
+		stroke-dashoffset: 0;
+	}
+	50% {
+		stroke-dasharray: 89, 200;
+		stroke-dashoffset: -35;
+	}
+	100% {
+		stroke-dasharray: 89, 200;
+		stroke-dashoffset: -124;
+	}
+}
